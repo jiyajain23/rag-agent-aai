@@ -1,4 +1,3 @@
-
 import streamlit as st
 from langchain_core.messages import HumanMessage, AIMessage
 
@@ -39,7 +38,24 @@ for msg in st.session_state.messages:
                     st.write(f"- {src} (page {page})")
 
 # New turn
-if question := st.chat_input("Ask about the manual..."):
+question = st.chat_input("Ask about the manual...")
+
+# Show sample questions if chat is empty
+if not st.session_state.messages:
+    st.markdown("#### Try asking:")
+    col1, col2 = st.columns(2)
+    if col1.button("What is an Abnormal Runway Contact (ARC)?", use_container_width=True):
+        question = "What is an Abnormal Runway Contact (ARC)?"
+    if col2.button("What is the Selection Criteria for SQMS In-Charges", use_container_width=True):
+        question = "What is the Selection Criteria for SQMS In-Charges"
+    
+    col3, col4 = st.columns(2)
+    if col3.button("What is criteria for ACCEPTANCE OF A FLIGHT PLAN", use_container_width=True):
+        question = "What is criteria for ACCEPTANCE OF A FLIGHT PLAN"
+    if col4.button("How should I handle a communication failure?", use_container_width=True):
+        question = "How should I handle a communication failure?"
+
+if question:
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user"):
         st.markdown(question)
