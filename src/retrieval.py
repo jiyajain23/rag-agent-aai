@@ -66,6 +66,12 @@ def build_reranked_hybrid_retriever(vector_db: Chroma) -> RerankRetriever:
         for content, metadata in zip(raw["documents"], raw["metadatas"])
     ]
 
+    if not chunk_docs:
+        raise ValueError(
+            "The vector database is empty. "
+            "Please run `python -m src.ingest` to populate it before starting the app."
+        )
+
     bm25_retriever = BM25Retriever.from_documents(chunk_docs)
     bm25_retriever.k = BM25_K
 
