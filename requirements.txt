@@ -1,0 +1,11 @@
+streamlit 
+langchain 
+langchain-chroma 
+langchain-community 
+langchain-huggingface 
+langchain-groq 
+langchain-classic 
+chromadb 
+sentence-transformers 
+rank_bm25 
+python-dotenv

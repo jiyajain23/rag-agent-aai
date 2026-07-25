@@ -1,0 +1,25 @@
+
+# --- Secrets ---
+.streamlit/secrets.toml
+.env
+
+# --- Generated data (regenerate via `python -m src.ingest`) ---
+data/chroma_db/
+data/raw_pdfs/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+
+# --- OS / editor cruft ---
+.DS_Store
+.vscode/
+.idea/
