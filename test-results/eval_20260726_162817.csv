@@ -1,0 +1,45 @@
+question,answer,expected_keywords,keywords_found,score
+What is an Abnormal Runway Contact (ARC)?,"An Abnormal Runway Contact (ARC) is any landing or takeoff involving abnormal runway or landing surface contact and includes events such as hard/heavy landings, long/fast landings, or other unusual conditions.","runway, contact","runway, contact",1.0
+What does ATS stand for?,ATS stands for Air Traffic Services.,air traffic service,air traffic service,1.0
+What data does ATS units need to collect?,"ATS units need to collect the following types of data:
+
+1. Traffic Sample data (TSD)
+2. Data on Large Height Deviation (LHD)
+3. Gross Navigation Error data (GNE), which includes:
+   - Large Lateral Deviation (LLD)
+   - Large Longitudinal Error (LLE)","traffic sample data, large height deviation","traffic sample data, large height deviation",1.0
+Eligibility criteria for ATCO,"Based on the provided context, the eligibility criteria for ATCO (Air Traffic Controller) nomination for Surveillance Control Course (SCC) are as follows:
+
+1. **General**: The ATCO being considered for nomination shall hold a valid Class III medical assessment. However, when the Medical Assessment from DGCA (Directorate General of Civil Aviation) is awaited, the ATCO shall be in possession of a medical certificate (CA 35) issued by the Designated Medical Examiner (DME).
+
+2. **Minimum Experience**: The officer shall have a minimum of one year of experience at the station of posting after acquiring the relevant rating(s), as per Para 4.2.1(a) or (b), whichever is applicable.
+
+3. **Previous Eligibility**: In the case of ATCOs who were previously posted at a surveillance station and were eligible for nomination as per criteria mentioned in Para 4.1 and 4.2 of this ATMC at that station, they shall regain eligibility once they have revalidated or acquired the relevant rating(s).","class iii medical assessment, one year of experience","class iii medical assessment, one year of experience",1.0
+The SAR presentation in the Refresher Training,"The SAR presentation in the Refresher Training for ATCOs should be of sufficient duration to cover the following topics:
+
+1. Important Abbreviations & Definitions;
+2. SAR system components;
+3. SAR process and SAR organisation;
+4. Aeronautical SAR communication;
+5. SAR cooperation;
+6. Rescue Coordination Centres and Rescue Subcentres;
+7. Operational procedures during aircraft in distress;
+8. COSPAS-SARSAT system;
+9. GADSS, LADR and OPS CTRL Directory.","sar system components, sar cooperation","sar system components, sar cooperation",1.0
+ATS units,"ATS units (ATSUs) provide air traffic services, including:
+
+1. Flight information service
+2. Alerting service
+3. Air traffic advisory service
+4. Air traffic control service (area control service, approach control service, or aerodrome control service)
+
+Their responsibilities include:
+
+a) Transmitting information pertinent to the safe conduct of the flight without expecting a reply from the aircraft.
+b) Monitoring and plotting the progress of the flight, and coordinating transfer of control with adjacent ATS units without requiring transmissions or other responses from the aircraft.
+c) Informing and keeping informed other ATS units, and forwarding information to the aerodrome operator.
+
+ATS units should also:
+
+- Transmit routine and special air-reports to the associated meteorological office as soon as practicable.
+- Transmit special air-reports to other aircraft concerned, and to other ATS units concerned, as soon as practicable.","flight information service, air traffic advisory","flight information service, air traffic advisory",1.0

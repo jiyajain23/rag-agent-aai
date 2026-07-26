@@ -1,0 +1,72 @@
+Eval Run: 2026-07-26 16:28:46
+Questions: 6  |  Average score: 100.00%
+================================================================================
+
+Q: What is an Abnormal Runway Contact (ARC)?
+A: An Abnormal Runway Contact (ARC) is any landing or takeoff involving abnormal runway or landing surface contact and includes events such as hard/heavy landings, long/fast landings, or other unusual conditions.
+   Score: 100%  |  Found: [runway, contact]  |  Expected: [runway, contact]
+--------------------------------------------------------------------------------
+
+Q: What does ATS stand for?
+A: ATS stands for Air Traffic Services.
+   Score: 100%  |  Found: [air traffic service]  |  Expected: [air traffic service]
+--------------------------------------------------------------------------------
+
+Q: What data does ATS units need to collect?
+A: ATS units need to collect the following types of data:
+
+1. Traffic Sample data (TSD)
+2. Data on Large Height Deviation (LHD)
+3. Gross Navigation Error data (GNE), which includes:
+   - Large Lateral Deviation (LLD)
+   - Large Longitudinal Error (LLE)
+   Score: 100%  |  Found: [traffic sample data, large height deviation]  |  Expected: [traffic sample data, large height deviation]
+--------------------------------------------------------------------------------
+
+Q: Eligibility criteria for ATCO
+A: Based on the provided context, the eligibility criteria for ATCO (Air Traffic Controller) nomination for Surveillance Control Course (SCC) are as follows:
+
+1. **General**: The ATCO being considered for nomination shall hold a valid Class III medical assessment. However, when the Medical Assessment from DGCA (Directorate General of Civil Aviation) is awaited, the ATCO shall be in possession of a medical certificate (CA 35) issued by the Designated Medical Examiner (DME).
+
+2. **Minimum Experience**: The officer shall have a minimum of one year of experience at the station of posting after acquiring the relevant rating(s), as per Para 4.2.1(a) or (b), whichever is applicable.
+
+3. **Previous Eligibility**: In the case of ATCOs who were previously posted at a surveillance station and were eligible for nomination as per criteria mentioned in Para 4.1 and 4.2 of this ATMC at that station, they shall regain eligibility once they have revalidated or acquired the relevant rating(s).
+   Score: 100%  |  Found: [class iii medical assessment, one year of experience]  |  Expected: [class iii medical assessment, one year of experience]
+--------------------------------------------------------------------------------
+
+Q: The SAR presentation in the Refresher Training
+A: The SAR presentation in the Refresher Training for ATCOs should be of sufficient duration to cover the following topics:
+
+1. Important Abbreviations & Definitions;
+2. SAR system components;
+3. SAR process and SAR organisation;
+4. Aeronautical SAR communication;
+5. SAR cooperation;
+6. Rescue Coordination Centres and Rescue Subcentres;
+7. Operational procedures during aircraft in distress;
+8. COSPAS-SARSAT system;
+9. GADSS, LADR and OPS CTRL Directory.
+   Score: 100%  |  Found: [sar system components, sar cooperation]  |  Expected: [sar system components, sar cooperation]
+--------------------------------------------------------------------------------
+
+Q: ATS units
+A: ATS units (ATSUs) provide air traffic services, including:
+
+1. Flight information service
+2. Alerting service
+3. Air traffic advisory service
+4. Air traffic control service (area control service, approach control service, or aerodrome control service)
+
+Their responsibilities include:
+
+a) Transmitting information pertinent to the safe conduct of the flight without expecting a reply from the aircraft.
+b) Monitoring and plotting the progress of the flight, and coordinating transfer of control with adjacent ATS units without requiring transmissions or other responses from the aircraft.
+c) Informing and keeping informed other ATS units, and forwarding information to the aerodrome operator.
+
+ATS units should also:
+
+- Transmit routine and special air-reports to the associated meteorological office as soon as practicable.
+- Transmit special air-reports to other aircraft concerned, and to other ATS units concerned, as soon as practicable.
+   Score: 100%  |  Found: [flight information service, air traffic advisory]  |  Expected: [flight information service, air traffic advisory]
+--------------------------------------------------------------------------------
+

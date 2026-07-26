@@ -1,0 +1,2 @@
+# This file keeps the eval/results/ directory tracked by git.
+# Actual eval output files (*.csv, *.txt) are gitignored.
