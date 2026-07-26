@@ -1,14 +1,10 @@
-"""
-Central place for all pipeline constants.
-Change values here rather than hunting through ingest.py / retrieval.py / chain.py.
-"""
 
 # --- Paths ---
 CHROMA_DB_PATH = "data/chroma_db"
-PDF_FOLDER_PATH=""
+PDF_FOLDER_PATH="data/aim-docs"
 # --- Chunking (settled on after comparing 500/1000/1500 in the exploration notebook) ---
-CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 200
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 100
 
 # --- Embedding model ---
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"

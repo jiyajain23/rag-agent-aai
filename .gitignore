@@ -1,11 +1,6 @@
-
 # --- Secrets ---
 .streamlit/secrets.toml
 .env
-
-# --- Generated data (regenerate via `python -m src.ingest`) ---
-data/chroma_db/
-data/raw_pdfs/
 
 # --- Python ---
 __pycache__/
@@ -23,3 +18,5 @@ env/
 .DS_Store
 .vscode/
 .idea/
+.pytest_cache/
+

@@ -11,12 +11,13 @@ chunks, which is what removes false positives like a BM25 hit on the word
 from typing import List
 
 from langchain_chroma import Chroma
-from langchain_community.retrievers import BM25Retriever
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 from langchain_core.callbacks import CallbackManagerForRetrieverRun
 from langchain_huggingface import HuggingFaceEmbeddings
+from pydantic import ConfigDict
+from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder
 
 from src.config import (
@@ -30,6 +31,25 @@ from src.config import (
 )
 
 
+class BM25RetrieverLocal(BaseRetriever):
+    """Lightweight BM25 retriever built directly on rank_bm25 (no langchain-community)."""
+
+    docs: List[Document]
+    k: int = 4
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    def _get_relevant_documents(
+        self, query: str, *, run_manager: CallbackManagerForRetrieverRun
+    ) -> List[Document]:
+        tokenized_corpus = [d.page_content.lower().split() for d in self.docs]
+        bm25 = BM25Okapi(tokenized_corpus)
+        tokenized_query = query.lower().split()
+        scores = bm25.get_scores(tokenized_query)
+        top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[: self.k]
+        return [self.docs[i] for i in top_indices]
+
+
 class RerankRetriever(BaseRetriever):
     """Wraps a base retriever and reranks its results with a cross-encoder."""
 
@@ -37,8 +57,7 @@ class RerankRetriever(BaseRetriever):
     reranker: CrossEncoder
     top_n: int = RERANK_TOP_N
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     def _get_relevant_documents(
         self, query: str, *, run_manager: CallbackManagerForRetrieverRun
@@ -72,8 +91,7 @@ def build_reranked_hybrid_retriever(vector_db: Chroma) -> RerankRetriever:
             "Please run `python -m src.ingest` to populate it before starting the app."
         )
 
-    bm25_retriever = BM25Retriever.from_documents(chunk_docs)
-    bm25_retriever.k = BM25_K
+    bm25_retriever = BM25RetrieverLocal(docs=chunk_docs, k=BM25_K)
 
     vector_retriever = vector_db.as_retriever(search_kwargs={"k": VECTOR_K})
 

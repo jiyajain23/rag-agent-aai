@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is an Abnormal Runway Contact (ARC)?",
+    "expected_keywords": ["runway", "contact"]
+  },
+  {
+    "question": "What does ATS stand for?",
+    "expected_keywords": ["air traffic service"]
+  },
+  {
+    "question": "What data does ATS units need to collect?",
+    "expected_keywords": ["traffic sample data", "large height deviation"]
+  },
+  {
+    "question": "Eligibility criteria for ATCO",
+    "expected_keywords": ["class iii medical assessment", "one year of experience"]
+  },
+  {
+    "question": "The SAR presentation in the Refresher Training",
+    "expected_keywords": ["sar system components", "sar cooperation"]
+  },
+  {
+    "question": "ATS units",
+    "expected_keywords": ["flight information service", "air traffic advisory"]
+  }
+]
