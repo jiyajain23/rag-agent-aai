@@ -1,4 +1,6 @@
-# ✈️ AAI AIM Docs RAG Assistant
+# ✈️ AIM Docs RAG Assistant
+
+LIVE DEMO : https://rag-agent-jiya.streamlit.app/
 
 A retrieval-augmented generation (RAG) chatbot that answers questions over the **Airports Authority of India (AAI) Manual of Air Traffic Services (MATS) Part 1 and other circulars (check out data/aim-docs to see)**, 
 
