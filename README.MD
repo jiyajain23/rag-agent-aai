@@ -1,5 +1,7 @@
 # AIM Docs RAG Assistant
 
+LIVE DEMO: https://rag-agent-jiya.streamlit.app/
+
 A retrieval-augmented generation (RAG) chatbot that answers questions over the **Airports Authority of India (AAI) Manual of Air Traffic Services (MATS) Part 1 and some other ATMC Circulars (check out data/aim-docs)**
 Ask it a question about the manual — ARC procedures, ATCO eligibility, SAR training, separation minima — and it retrieves the relevant pages, cites them, and answers strictly from that context (refusing to guess when the manual doesn't cover something).
 
