@@ -1,7 +1,6 @@
 # AIM Docs RAG Assistant
 
-A retrieval-augmented generation (RAG) chatbot that answers questions over the **Airports Authority of India (AAI) Manual of Air Traffic Services (MATS) Part 1**, built as a personal project to apply concepts from IBM's *Fundamentals of RAG* and *AI Agents* courses in a domain relevant to my internship at AAI.
-
+A retrieval-augmented generation (RAG) chatbot that answers questions over the **Airports Authority of India (AAI) Manual of Air Traffic Services (MATS) Part 1 and some other ATMC Circulars (check out data/aim-docs)**
 Ask it a question about the manual — ARC procedures, ATCO eligibility, SAR training, separation minima — and it retrieves the relevant pages, cites them, and answers strictly from that context (refusing to guess when the manual doesn't cover something).
 
 > ⚠️ **Disclaimer:** Built for personal learning and demonstration purposes only. This is not an authoritative source — always defer to the official MATS document for operational decisions.
@@ -64,7 +63,7 @@ User query
 | Component        | Choice                                            | Why |
 |-------------------|---------------------------------------------------|-----|
 | PDF loading       | PyPDFDirectoryLoader (pypdf)                      | Simple, works for digital-text PDFs |
-| Chunking          | RecursiveCharacterTextSplitter (1000 chars, 200 overlap) | Balances context retention vs. retrieval precision — see chunk-size experiment below |
+| Chunking          | RecursiveCharacterTextSplitter (500 chars, 100 overlap) | Balances context retention vs. retrieval precision |
 | Embeddings        | `sentence-transformers/all-MiniLM-L6-v2`          | Small, fast, free, runs locally — no API cost |
 | Vector store      | Chroma                                            | Simple local persistence, good LangChain support |
 | Keyword search    | BM25 (`rank_bm25`)                                | Catches exact-term/acronym queries semantic search misses |
@@ -85,6 +84,7 @@ aim-rag-assistant/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
+├── .gitattributes
 │
 ├── .streamlit/
 │   └── secrets.toml           # GROQ_API_KEY (gitignored)
@@ -96,8 +96,8 @@ aim-rag-assistant/
 │   └── chain.py                   # conversational RAG chain (history-aware + grounded QA)
 │
 ├── data/
-│   ├── aim-docs/               # source PDFs (gitignored)
-│   └── chroma_db/               # persisted vector store (gitignored, rebuild via src/ingest.py)
+│   ├── aim-docs/               # source PDFs 
+│   └── chroma_db/               # persisted vector store 
 │
 ├── notebooks/
 │   └── rag-agent.ipynb         # original exploration notebook (chunking tests, debugging)
